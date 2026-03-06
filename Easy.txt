@@ -1,4 +1,5 @@
 RemoveDuplicates
+---------------------------------------------
 I did an easy code for removing duplicates in an array.
 --------------------------------------------
 public class Solution {
@@ -23,7 +24,7 @@ public class Solution {
 -------------------------------------------------
 buy and sell stock
 I did the sell stock or sell gold and silver.
--------------------
+-------------------------------------------------
 public class Solution {
     public int MaxProfit(int[] prices) {
         
@@ -39,3 +40,30 @@ public class Solution {
         return profit;      
     }
 }
+-------------------------------------------------
+Rotate the array by X amount if (k = x)
+-------------------------------------------------
+public class Solution 
+{
+    public void Rotate(int[] nums, int k) 
+    {
+        int n = nums.Length;
+        
+        k = k % n;
+        
+        int[] result = new int[n];
+            
+        for (int i = 0; i < n; i++)
+        {
+            int newIndex = (i + k) % n;
+            result[newIndex] = nums[i];
+        }
+        
+        for (int i = 0; i < n; i++)
+        {
+            nums[i] = result[i];
+        }
+        
+    }
+}
+-------------------------------------------------
