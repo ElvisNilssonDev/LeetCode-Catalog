@@ -67,7 +67,7 @@ public class Solution
     }
 }
 -------------------------------------------------
-Hitta dubletter i arrayen []
+Hitta dubletter i arrayen [] (Slow version, Nested loops)
 ------------------------------------------------
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
@@ -86,5 +86,25 @@ public class Solution {
         }
         return false;
     }
+}
+-----------------------------------------------------
+(Part 2 HashSet) Duplicates seen.
+----------------------------------------------------
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+      
+      HashSet<int> seen = new HashSet<int>();
+        
+        foreach (int num in nums)
+        {
+            if (seen.Contains(num))
+            {
+                return true;
+            }
+            
+            seen.Add(num);
+        }    
+        return false;
+    }    
 }
 -----------------------------------------------------
