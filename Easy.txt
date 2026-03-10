@@ -41,7 +41,7 @@ public class Solution {
     }
 }
 -------------------------------------------------
-Rotate the array by X amount if (k = x)
+Rotate the array by Y amount if (k = x)
 -------------------------------------------------
 public class Solution 
 {
