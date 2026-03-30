@@ -125,3 +125,35 @@ public class Solution
     }
 }
 ---------------------------------------------------------
+find the intersection of to arreys
+---------------------------------------------------------
+public class Solution {
+    public int[] Intersect(int[] nums1, int[] nums2) {
+        
+        var count = new Dictionary<int, int>();
+        var list = new List<int>();
+        
+        foreach (int num in nums1)
+        {
+            if (count.ContainsKey(num))
+            {
+                count[num] = count[num] + 1;
+            }
+            else
+            {
+                count[num] = 1;
+            }           
+        }
+        
+        foreach (int num2 in nums2)
+        {
+            if(count.ContainsKey(num2) && count[num2] > 0)
+               {
+                   list.Add(num2);
+                       count[num2] = count[num2] - 1;
+               }
+        }
+        return list.ToArray();
+    }
+}
+---------------------------------------------------------
